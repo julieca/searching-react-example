@@ -13,7 +13,6 @@ const Search = props => {
 
   const [keyword, setKeyword] = React.useState('');
   const [datares, setDatares] = React.useState([]);
-  const history = useHistory();
 
   useEffect(() => {
     props.getData();
