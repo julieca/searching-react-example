@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import {
-  Grid, IconButton, TextField
+  Grid, IconButton, TextField, Select, MenuItem
 } from '@material-ui/core';
 import { ArrowBack } from '@material-ui/icons';
 import Card from "../components/Card";
@@ -33,12 +33,28 @@ const Search = props => {
     //
     <div>
       <div>
-        <TextField
+        {/* <TextField
           value={keyword}
           label={keywordLabel}
           placeholder={keywordLabel}
           onChange={(input) => setKeyword(input.target.value)}
-        />
+        /> */}
+
+        {/* <Select
+          multiple
+          label={keywordLabel}
+          placeholder={keywordLabel}
+          value={keyword}
+          onChange={() =>{}}
+        >
+          {
+            furnitures.map((furniture) => (
+              <MenuItem></MenuItem>
+            ));
+        }
+
+        </Select> */}
+
       </div>
 
       <Grid container justify="center" alignItems="center">
