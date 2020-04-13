@@ -32,9 +32,28 @@ const Search = props => {
   });
 
   const filter = () => {
-    // const result = props.data.productPromo.filter(
-    //   product => product.title.includes(keyword));
-    // setDatares(result);
+    const result = props.products;
+    if (keyword.length > 0) {
+      result.filter(p => p.name.includes(keyword))
+    }
+    if (furnitureStyle.length > 0) {
+      result.filter(p => furnitureStyle.some(v => p.furniture_style.indexOf(v) !== -1))
+    }
+    // if (deliveryTime.length > 0) {
+    //   const result2 = [];
+    //   for (var i in deliveryTime) {
+    //     if (deliveryTime[i] == -1) {
+
+    //     } else {
+
+    //     }
+    //     const filtered = result.filter(p => p.delivery_time > deliveryTime[i] - 7 && p.delivery_time < deliveryTime[i])
+    //     result2 = [...result2, filtered]
+    //   }
+
+    //   result = result2;
+    // }
+    setDatares(result);
   }
 
   return (
