@@ -9,10 +9,18 @@ import Card from "../components/Card";
 import { getData } from '../actions';
 
 const keywordLabel = "Search Furniture";
+const furnitureSLabel = "Furniture Style";
+const deliveryTLabel = "Delivery Time";
+
+const deliveryTChoice = ["1 week", "2 weeks", "1 month","more than 1 month"];
+
 const Search = props => {
 
   const [keyword, setKeyword] = React.useState('');
   const [datares, setDatares] = React.useState([]);
+  const [furnitureStyle, setfurnitureStyle] = React.useState([]);
+  const [deliveryTime, setdeliveryTime] = React.useState([]);
+
   const history = useHistory();
 
   useEffect(() => {
@@ -33,28 +41,53 @@ const Search = props => {
     //
     <div>
       <div>
-        {/* <TextField
+        <TextField
           value={keyword}
           label={keywordLabel}
           placeholder={keywordLabel}
           onChange={(input) => setKeyword(input.target.value)}
-        /> */}
+        />
 
-        {/* <Select
+        <InputLabel id="furniturStyleL">{furnitureSLabel}</InputLabel>
+        <Select
           multiple
-          label={keywordLabel}
-          placeholder={keywordLabel}
-          value={keyword}
-          onChange={() =>{}}
+          labelId="furniturStyleL"
+          value={furnitureStyle}
+          onChange={(e) =>{setfurnitureStyle(e.target.value)}}
+          renderValue={(selected) => selected.join(', ')}
         >
           {
-            furnitures.map((furniture) => (
-              <MenuItem></MenuItem>
-            ));
+            props.data.furniture_styles.map((furniture) => (
+              <MenuItem
+              key={furniture} value={furniture}
+              >
+                <ListItemText primary={furniture}/>
+                <Checkbox checked={furnitureStyle.indexOf(furniture) >-1} />
+              </MenuItem>
+            ))
         }
+        </Select>
 
-        </Select> */}
-
+        <InputLabel id="deliveryTimeL">{deliveryTLabel}</InputLabel>
+        <Select
+          multiple
+          labelId="deliveryTimeL"
+          value={deliveryTime}
+          onChange={(e) =>{setdeliveryTime(e.target.value)}}
+          renderValue={(selected) => selected.join(', ')}
+        >
+          {
+            deliveryTChoice.map((delivery) => (
+              <MenuItem
+              key={delivery} value={delivery}
+              >
+                <ListItemText primary={delivery}/>
+                <Checkbox checked={deliveryTime.indexOf(delivery)>-1} />
+              </MenuItem>
+              )
+            )
+          }
+        </Select>
       </div>
 
       <Grid container justify="center" alignItems="center">
