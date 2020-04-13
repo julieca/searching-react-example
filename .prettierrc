@@ -1,0 +1,38 @@
+{
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 7
+    },
+    "rules": {
+      "semi": ["error", "never"]
+    }
+  },
+  "prettierOptions": {
+    "bracketSpacing": true,
+    "semi": true,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "arrowParens": "avoid",
+    "endOfLine": "auto",
+    "array-element-newline": [
+      "error",
+      { 
+        "multiline": true, 
+        "minItems": 5,
+        "consistent": true 
+      }
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "minProperties": 5,
+        "consistent": true,
+        "ObjectExpression": "always",
+        "ObjectPattern": "never"
+      }
+    ]
+  },
+  "fallbackPrettierOptions": {
+    "singleQuote": true
+  }
+}
