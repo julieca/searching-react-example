@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import {
   Grid, InputLabel,
   ListItemText,
-  Checkbox, TextField, Select, MenuItem
+  Checkbox, TextField, Select, MenuItem,
+  FormControl
 } from '@material-ui/core';
 import { ArrowBack } from '@material-ui/icons';
 import Card from "../components/Card";
@@ -37,6 +38,7 @@ const Search = props => {
     // setDatares(result);
   }
 
+  console.log(props)
   return (
     //
     <div>
@@ -47,6 +49,7 @@ const Search = props => {
           placeholder={keywordLabel}
           onChange={(input) => setKeyword(input.target.value)}
         />
+        <FormControl>
 
         <InputLabel id="furniturStyleL">{furnitureSLabel}</InputLabel>
         <Select
@@ -67,6 +70,8 @@ const Search = props => {
             ))
           }
         </Select>
+        </FormControl>
+        <FormControl>
 
         <InputLabel id="deliveryTimeL">{deliveryTLabel}</InputLabel>
         <Select
@@ -88,6 +93,7 @@ const Search = props => {
             )
           }
         </Select>
+        </FormControl>
       </div>
 
       <Grid container justify="center" alignItems="center">
