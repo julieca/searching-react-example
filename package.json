@@ -2,6 +2,7 @@
   "name": "fabelio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://julieca.github.io/searching-react-example",
   "dependencies": {
     "@material-ui/core": "^4.9.5",
     "@material-ui/icons": "^4.9.1",

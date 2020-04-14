@@ -1,10 +1,11 @@
 .price{
-  color: orange;
+  color: #ff9b08;
   text-align: right;
 }
 .time{
-  color: blue;
+  color: #106cc8;
   text-align: right;
+  text-decoration: underline;
 }
 .bold{
   font-weight: 600 !important;
@@ -13,7 +14,7 @@
 
 /* 
 furniture 67a1dc
-price ff9b08
+price 
 delivery and background #106cc8
 
 */

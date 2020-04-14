@@ -1,0 +1,5 @@
+.dark label,
+.dark input
+.dark .MuiSelect-select{
+  color:white;
+}
