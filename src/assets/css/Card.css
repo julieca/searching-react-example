@@ -1,9 +1,19 @@
 .price{
-  color: yellow;
+  color: orange;
+  text-align: right;
 }
 .time{
+  color: blue;
   text-align: right;
 }
 .bold{
-  font-weight: 600;
+  font-weight: 600 !important;
 }
+
+
+/* 
+furniture 67a1dc
+price ff9b08
+delivery and background #106cc8
+
+*/
